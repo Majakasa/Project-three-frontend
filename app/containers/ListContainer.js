@@ -14,7 +14,7 @@ class CharacterList extends Component {
   }
 
   componentDidMount() {
-    ajaxHelpers.getProducts(function(data) {
+    ajaxHelpers.getCharacters(function(data) {
       if (data) {
         this.setState({data: data})
       } else {
@@ -32,7 +32,6 @@ class CharacterList extends Component {
           Creator: {character.creator},
           Wins: {character.win},
           Loses: {character.lose}</p>
-
         </div>
       );
     });
@@ -55,7 +54,7 @@ class CharacterList extends Component {
     }
 
     return (
-      <p>Loading Chara...</p>
+      <p>Loading Characters...</p>
     );
   }
 }

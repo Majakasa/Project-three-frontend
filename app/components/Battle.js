@@ -3,13 +3,13 @@ import React from 'react';
 
 const rps = React.createClass({
 
-render: function() {
+render: function(props) {
   return (
-      <div className="battle">
-          <button type='button' onClick={props.rock}>rock</button>
-          <button type='button' onClick={props.rpsBattle}>paper</button>
-          <button type='button' onClick={test}>scissors</button>
-        </div>
+    <div className="battle">
+        <button type='button'  onClick={this.onClickRock}>Rock</button>
+        <button type='button'  onClick={this.onClickPaper}>Paper</button>
+        <button type='button'  onClick={this.onClickScissors}>Scissors</button>
+      </div>
     );
   }
 })

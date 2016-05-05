@@ -1,40 +1,33 @@
 var axios = require('axios');
 
 module.exports = {
-  baseUrl: 'http://localhost:3000',
+  url: 'http://localhost:3000',
 
-  getProducts: function(afterAjaxFxn) {
+  getCharacters: function(afterAjaxFxn) {
     const uid = localStorage.uid;
     const accessToken = localStorage.accessToken;
     const client = localStorage.client;
-
-    axios.get(this.baseUrl + '/characters', {
-      // these 3 tokens will be sent to server for auth
+    axios.get(this.url + '/characters', {
       headers: {
         'uid': uid,
         'access-token': accessToken,
         'client': client
       }
     })
-    // success: pass the response to afterAjaxFxn
     .then(function (response) {
       console.log("response:", response.data);
       if (afterAjaxFxn) {
         afterAjaxFxn(response.data);
       }
     })
-    // upon failure, pass nothing
     .catch(function (response) {
-      // we failed to logout
       console.log('There was an error', response);
       afterAjaxFxn();
     });
   },
-
   findCharacter: function(name) {
-    return axios.get('http://localhost:3000/characters/' + name);
+    return axios.get(this.url + 'characters/' + name);
   },
-
 };
 
 
