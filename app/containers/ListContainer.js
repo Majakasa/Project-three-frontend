@@ -55,7 +55,7 @@ class CharacterList extends Component {
     }
 
     return (
-      <p>Loading products...</p>
+      <p>Loading Chara...</p>
     );
   }
 }

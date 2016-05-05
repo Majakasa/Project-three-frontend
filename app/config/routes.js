@@ -4,6 +4,7 @@ import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import Main from '../components/Main';
 import Home from '../components/Home';
 import About from '../components/About';
+import Battle from '../containers/BattleContainer';
 import CharacterList from '../containers/ListContainer';
 import AddContainer from '../containers/AddContainer';
 
@@ -17,6 +18,7 @@ const routes =(
       <Route path='add' component={AddContainer} />
       <Route path='about' component={About} />
       <Route path='charactersList' component={CharacterList} />
+      <Route path='battle' component={Battle} />
     </Route>
   </Router>
 );

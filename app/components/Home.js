@@ -11,6 +11,7 @@ class App {
           <li><Link to={'/charactersList'}>Characters</Link></li>
           <li><Link to={'/about'}>About</Link></li>
           <li><Link to={'/add'}>add</Link></li>
+          <li><Link to={'/battle'}>battle</Link></li>
         </ul>
         {this.props.children}
       </div>

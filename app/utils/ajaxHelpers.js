@@ -30,8 +30,10 @@ module.exports = {
       afterAjaxFxn();
     });
   },
-  
 
+  findCharacter: function(name) {
+    return axios.get('http://localhost:3000/characters/' + name);
+  },
 
 };
 
@@ -49,16 +51,16 @@ module.exports = {
 
 // callback example
 
-getSomethingAndRunCB(function(someData) {
-  console.log(someData);
-  console.log('I was called')
-});
-
-function getSomethingAndRunCB(callback) {
-  // do something that takes a while
-  // do some other things
-  // here i got some data
-  var data = 'some data';
-  // run a callback
-  callback(data);
-}
+// getSomethingAndRunCB(function(someData) {
+//   console.log(someData);
+//   console.log('I was called')
+// });
+//
+// function getSomethingAndRunCB(callback) {
+//   // do something that takes a while
+//   // do some other things
+//   // here i got some data
+//   var data = 'some data';
+//   // run a callback
+//   callback(data);
+// }
