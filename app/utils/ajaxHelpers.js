@@ -29,7 +29,9 @@ module.exports = {
       console.log('There was an error', response);
       afterAjaxFxn();
     });
-  }
+  },
+  
+
 
 };
 

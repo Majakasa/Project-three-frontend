@@ -1,12 +1,14 @@
-import React from 'react'
+import React, {
+  Component
+} from 'react';
 
-const About = React.createClass({
-  render: function() {
+class About extends Component {
+  render(){
     return (
       <div>
-        <p>m the about page</p>
+        <p>Im the about page</p>
       </div>
     );
   }
-})
+}
 export default About

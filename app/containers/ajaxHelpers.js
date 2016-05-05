@@ -8,8 +8,8 @@ module.exports = {
     const accessToken = localStorage.accessToken;
     const client = localStorage.client;
 
-    axios.get(this.baseUrl + '/characters', {
-      // these 3 tokens will be sent to server for auth
+    axios.get(this.baseUrl + '/products', {
+      // these 3 tokens will be sent to server for auth 
       headers: {
         'uid': uid,
         'access-token': accessToken,
@@ -30,7 +30,6 @@ module.exports = {
       afterAjaxFxn();
     });
   }
-
 };
 
 
