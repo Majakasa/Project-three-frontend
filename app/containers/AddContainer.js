@@ -8,7 +8,8 @@ const AddContainer = React.createClass({
     return {
       Name: '',
       Gender: '',
-      Creator: ''
+      Creator: '',
+      status:''
     };
   },
   onChangeName: function(e) {
@@ -28,20 +29,20 @@ const AddContainer = React.createClass({
   },
   onSubmitList: function(e) {
     e.preventDefault();
-    const character = {
-      Name: this.state.Name,
-      Gender: this.state.Gender,
-      Creator: this.state.Creator,
+    const newCharacter = {
+      name: this.state.Name,
+      gender: this.state.Gender,
+      creator: this.state.Creator,
     }
-    ajaxHelpers.AddRecipe(character)
+    ajaxHelpers.addCharacter(newCharacter)
     .then(function(response){
       console.log(response.data);
       this.setState({
-        recipeAdded: "added"
+        status: "added"
       });
     }.bind(this))
     .catch(function(err){
-      console.warn('err');
+      console.warn(err,'err');
       return err;
     })
   },
@@ -69,7 +70,7 @@ const AddContainer = React.createClass({
           onChangeGender={this.onChangeGender}
           onChangeCreator={this.onChangeCreator}
           onSubmitList={this.onSubmitList}
-          listAddedMsg={this.state.listAdded} />
+        />
       </div>
     )
   }

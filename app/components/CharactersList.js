@@ -14,7 +14,7 @@ import React from 'react';
 function Characters(props){
   return (
     <div>
-      <h2>Recipe by name</h2>
+      <h2>Characters/h2>
       <ul>
         {Characters}
       </ul>

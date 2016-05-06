@@ -47,9 +47,6 @@ class BattleContainer extends Component{
 //   })
 // }
 
-
-
-
       onClickRock(){
         computerMove()
         if(comMove == 'rock'){
@@ -114,31 +111,19 @@ class BattleContainer extends Component{
             this.setState({score: "It's a Tie"});
             console.log('computer choose', comMove,'it is a tie');
           }
-
-
-
         }
-
-
-
-
-
-
 
   render() {
     return (
         <div className="battle">
             <p>{this.state.score}</p>
             <p>{this.state.wins} {this.state.loses}</p>
-            <button type='button'  onClick={this.onClickRock}>Rock</button>
-            <button type='button'  onClick={this.onClickPaper}>Paper</button>
-            <button type='button'  onClick={this.onClickScissors}>Scissors</button>
-
+            <button type='button' disabled={this.state.wins == 3||this.state.loses == 3}  onClick={this.onClickRock}>Rock</button>
+            <button type='button' disabled={this.state.wins == 3||this.state.loses == 3}  onClick={this.onClickPaper}>Paper</button>
+            <button type='button' disabled={this.state.wins == 3||this.state.loses == 3}  onClick={this.onClickScissors}>Scissors</button>
           </div>
       );
   }
-
-
 }
 
 export default BattleContainer

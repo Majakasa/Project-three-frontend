@@ -3,7 +3,7 @@
   import axios from 'axios';
 
   import Find from '../components/Find';
-  import AjaxHelper from '../utils/AjaxHelpers';
+  import ajaxHelpers from '../utils/ajaxHelpers';
 
   const FindContainer = React.createClass({
     getInitialState: function() {
@@ -23,7 +23,7 @@
       const name = this.state.searchName;
       console.log(name);
 
-      AjaxHelper.findCharacter(name)
+      ajaxHelpers.findCharacter(name)
       .then(function(response){
         console.log(response.data);
         this.setState({
@@ -31,7 +31,7 @@
         });
       }.bind(this))
       .catch(function(err){
-        console.warn('err');
+        console.warn(err,'err');
         return err;
       })
     },

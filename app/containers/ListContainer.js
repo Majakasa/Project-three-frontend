@@ -15,6 +15,7 @@ class CharacterList extends Component {
 
   componentDidMount() {
     ajaxHelpers.getCharacters(function(data) {
+
       if (data) {
         this.setState({data: data})
       } else {
@@ -47,7 +48,7 @@ class CharacterList extends Component {
     if (this.state.data) {
       return (
         <div>
-          <p>Characters</p>
+          <p>Characters all</p>
           {this.renderData()}
         </div>
       )
