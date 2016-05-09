@@ -6,22 +6,8 @@ import { Router, Route, Link, browserHistory, IndexRoute, withRouter } from 'rea
 
 class Login {
 
-  // class Login inherits from Component
-  // runs the constructor fxn
-  // super calls the constructor on the parent class, passing the props
-  // Equivalent to:
-
-  // getInitialState() {
-  //   return {
-  //     email: '',
-  //     password: '',
-  //     error: false,
-  //     successMsg: ''
-  //   }
-  // }
 
   constructor(props) {
-    // super(props);
     this.state = {
       email: '',
       password: '',
@@ -38,10 +24,6 @@ class Login {
 
         this.setState({successMsg: 'Successfully logged in'});
 
-        /* Bonus fun feature */
-        // Route forwarding: if user tries to go to /products, but they're not logged in
-        // first redirect them to '/', then after they login, redirect them to
-        // '/products'
         const location = this.props.location;
         if (location.state && location.state.nextPathname) {
           this.props.history.push(location.state.nextPathname);

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import ajaxHelpers from '../utils/ajaxHelpers';
+import ajaxHelpers from './utils/ajaxHelpers';
 
 module.exports = {
   login(email, password, afterLoginFxn) {
@@ -10,7 +10,7 @@ module.exports = {
       return;
     }
 
-    axios.post('http://localhost:3000' + '/auth/sign_in', {
+    axios.post('https://gentle-fjord-48294.herokuapp.com' + '/auth/sign_in', {
       email: email,
       password: password
     })
@@ -42,7 +42,7 @@ module.exports = {
       return;
     }
 
-    axios.post('http://localhost:3000' + '/auth/', {
+    axios.post('https://gentle-fjord-48294.herokuapp.com' + '/auth/', {
       email: email,
       password: password,
       password_confirmation: password
@@ -71,7 +71,7 @@ module.exports = {
     const accessToken = localStorage.accessToken;
     const client = localStorage.client;
 
-    axios.delete('http://localhost:3000' + '/auth/sign_out', {
+    axios.delete('https://gentle-fjord-48294.herokuapp.com' + '/auth/sign_out', {
       headers: {
         'uid': uid,
         'access-token': accessToken,
