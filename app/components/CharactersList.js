@@ -11,6 +11,7 @@ import React from 'react';
   //     <hr/>
   //   </li>;
   // });
+
 function Characters(props){
   return (
     <div>

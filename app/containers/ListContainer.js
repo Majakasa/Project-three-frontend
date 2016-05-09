@@ -2,6 +2,9 @@ import React, {
   Component
 } from 'react';
 import ajaxHelpers from '../utils/ajaxHelpers';
+const list = {
+  textAlign: 'center'
+}
 
 class CharacterList extends Component {
   constructor(props) {
@@ -25,7 +28,7 @@ class CharacterList extends Component {
     return this.state.data.map(function(character, index) {
       return (
         <div key={index}>
-          <p>Name: {character.name},
+          <p style={list}>Name: {character.name},
           Gender: {character.gender},
           Creator: {character.creator},
           Wins: {character.win},

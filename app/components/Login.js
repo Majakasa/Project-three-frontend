@@ -1,7 +1,9 @@
 import auth from '../auth';
 import ajaxHelpers from '../utils/ajaxHelpers';
 import ReactDOM from 'react-dom';
-import React from 'react'
+import React, {
+  Component
+} from 'react';
 import { Router, Route, Link, browserHistory, IndexRoute, withRouter } from 'react-router';
 
 class Login {

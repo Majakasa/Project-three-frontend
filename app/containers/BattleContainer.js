@@ -15,6 +15,9 @@ function computerMove(){
       }
       return comMove
   }
+  const center = {
+    textAlign: 'center'
+  }
 
 class BattleContainer extends Component{
 
@@ -115,7 +118,7 @@ class BattleContainer extends Component{
 
   render() {
     return (
-        <div className="battle">
+        <div className="battle" style={center}>
             <p>{this.state.score}</p>
             <p>{this.state.wins} {this.state.loses}</p>
             <button type='button' disabled={this.state.wins == 3||this.state.loses == 3}  onClick={this.onClickRock}>Rock</button>
