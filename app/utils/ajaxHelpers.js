@@ -1,8 +1,9 @@
+
 var axios = require('axios');
 
 const ajaxHelpers = {
   getCharacters: function(data) {
-    return axios.get('https://gentle-fjord-48294.herokuapp.com' + '/characters')
+    return axios.get('http://localhost:3000' + '/characters')
     .then(function (response) {
       console.log("response:", response.data);
         data(response.data);
@@ -10,14 +11,14 @@ const ajaxHelpers = {
     })
   },
   findCharacter: function(id) {
-    return axios.get('https://gentle-fjord-48294.herokuapp.com' + '/characters/' + id)
+    return axios.get('http://localhost:3000' + '/characters/' + id)
 
   },
   addCharacter: function(newCharacter){
-    return axios.post('https://gentle-fjord-48294.herokuapp.com/', newCharacter);
+    return axios.post('http://localhost:3000/characters/', newCharacter);
   },
   deleteCharacter: function(name){
-     axios.delete('https://gentle-fjord-48294.herokuapp.com' + '/characters/' + name)
+     axios.delete('http://localhost:3000' + '/characters/' + name)
 
   }
 
