@@ -2,11 +2,12 @@
   "name": "project-three",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "production": "webpack -p",
-    "start": "node app.js"
-  },
+  "main": "webpack.config.js",
+   "scripts": {
+     "production": "webpack -p",
+     "start-dev": "webpack-dev-server --progress --inline --hot",
+     "start": "node app.js"
+   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Majakasa/Project-three-frontend.git"
