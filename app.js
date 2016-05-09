@@ -1,6 +1,6 @@
 var express = require('express'),
     app     = express(),
-    PORT    = process.env.PORT || 58164;
+    PORT    = process.env.PORT || 3000;
 ​
 app.use(express.static('./dist'));
 ​
