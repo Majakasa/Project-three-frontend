@@ -2,8 +2,8 @@ import React from 'react';
 
 function Find(props){
 
-
-  // const Find = props.characters.map((character, index) =>{
+  //
+  // const Find = props.character.map((character, index) =>{
   //   return <div key={index}>
   //     <p>Name: {character.name},
   //     Gender: {character.gender},
@@ -14,14 +14,17 @@ function Find(props){
   // });
 
   return (
+
     <div>
       <h2>Find</h2>
       <input onChange={props.onChangeName} placeholder='Search by id' type='text' />
       <button onClick={props.onSubmitCharacter} type='button' >Search</button>
+      <p>{props.character}</p>
       <br/><br/>
       <ul></ul>
     </div>
   );
+
 }
 
 

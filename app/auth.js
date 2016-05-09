@@ -10,7 +10,7 @@ module.exports = {
       return;
     }
 
-    axios.post(ajaxHelpers.baseUrl + '/auth/sign_in', {
+    axios.post('http://localhost:3000' + '/auth/sign_in', {
       email: email,
       password: password
     })
@@ -42,7 +42,7 @@ module.exports = {
       return;
     }
 
-    axios.post(ajaxHelpers.baseUrl + '/auth/', {
+    axios.post('http://localhost:3000' + '/auth/', {
       email: email,
       password: password,
       password_confirmation: password
@@ -71,7 +71,7 @@ module.exports = {
     const accessToken = localStorage.accessToken;
     const client = localStorage.client;
 
-    axios.delete(ajaxHelpers.baseUrl + '/auth/sign_out', {
+    axios.delete('http://localhost:3000' + '/auth/sign_out', {
       headers: {
         'uid': uid,
         'access-token': accessToken,

@@ -4,7 +4,6 @@ import React, {
 import ajaxHelpers from '../utils/ajaxHelpers';
 
 class CharacterList extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +11,6 @@ class CharacterList extends Component {
       error: null
     };
   }
-
   componentDidMount() {
     ajaxHelpers.getCharacters(function(data) {
 
@@ -23,7 +21,6 @@ class CharacterList extends Component {
       }
     }.bind(this))
   }
-
   renderData() {
     return this.state.data.map(function(character, index) {
       return (
@@ -37,14 +34,12 @@ class CharacterList extends Component {
       );
     });
   }
-
   render() {
     if (this.state.error) {
       return (
         <p>There was an error.</p>
       )
     }
-
     if (this.state.data) {
       return (
         <div>
@@ -53,7 +48,6 @@ class CharacterList extends Component {
         </div>
       )
     }
-
     return (
       <p>Loading Characters...</p>
     );

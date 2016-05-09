@@ -1,36 +1,35 @@
 import React from 'react';
 import axios from 'axios';
-
 import Delete from '../components/Delete';
 import ajaxHelpers from '../utils/ajaxHelpers';
 
 const DeleteContainer = React.createClass({
   getInitialState: function() {
     return {
-      searchName: '',
-      recipeDeleted: ''
+      searchId: '',
+      characterDeleted: ''
     };
   },
-
   onChangeName: function(e) {
     this.setState({
-      searchName: e.target.value
+      searchId: e.target.value
     })
   },
-
   onDelete: function() {
-    const name = this.state.searchName;
-    console.log(name);
-
-    ajaxHelpers.deleteCharacter(name)
+    const id = this.state.searchId;
+    console.log(id);
+    ajaxHelpers.deleteCharacter(id)
     .then(function(response){
       console.log(response.data);
       this.setState({
-        recipeDeleted: "deleted"
+        characterDeleted: "deleted"
       });
       console.log(this.state);
     }.bind(this))
-
+    .catch(function(err){
+      console.warn(err,'err');
+      return err;
+    })
   },
 
   render: function(){

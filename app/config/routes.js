@@ -6,6 +6,7 @@ import Home from '../components/Home';
 import About from '../components/About';
 import Login from '../components/Login';
 import Battle from '../containers/BattleContainer';
+import SignUp from '../components/SignUp';
 
 import CharacterList from '../containers/ListContainer';
 import AddContainer from '../containers/AddContainer';
@@ -26,6 +27,8 @@ const routes =(
       <Route path='delete' component={DeleteContainer} />
       <Route path='find' component={FindContainer} />
       <Route path='login' component={Login} />
+      <Route path='signup' component={SignUp} />
+
 
     </Route>
   </Router>

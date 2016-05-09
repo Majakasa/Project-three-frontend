@@ -9,7 +9,9 @@ const AddContainer = React.createClass({
       Name: '',
       Gender: '',
       Creator: '',
-      status:''
+      status:'',
+      win: 1,
+      lose: 1
     };
   },
   onChangeName: function(e) {
@@ -33,6 +35,8 @@ const AddContainer = React.createClass({
       name: this.state.Name,
       gender: this.state.Gender,
       creator: this.state.Creator,
+      win: this.state.win,
+      lose: this.state.lose
     }
     ajaxHelpers.addCharacter(newCharacter)
     .then(function(response){

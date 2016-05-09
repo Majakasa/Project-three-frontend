@@ -82,7 +82,7 @@ class Login {
         <input placeholder='email' type='email' name='email' onChange={ e => this.setState({email: e.target.value}) } />
         <input placeholder='password' type='password' name='password' onChange={ e => this.setState({password: e.target.value}) } />
         <button onClick={ () => this.handleLogin() }>Submit</button>
-        <p>{"Don't have an account?"}<Link to={'/signup'}>Sign Up</Link></p>
+        <p><Link to={'/signup'}>Sign Up</Link></p>
         <p>{this.state.successMsg}</p>
       </div>
     );
